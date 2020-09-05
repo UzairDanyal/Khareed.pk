@@ -1,0 +1,19 @@
+
+
+<form [formGroup]="filterForm">
+
+    <div class="form-group">
+        <label for="keyword">Product Name</label>
+        <input type="text" formControlName="keyword" class="form-control" id="Keyword" aria-describedby="emailHelp" placeholder="Enter Product Name">
+    </div>
+    <div class="form-group">
+        <label for="sku">Sku</label>
+        <input type="text" formControlName="sku" class="form-control" id="sku" placeholder="Sku Number">
+    </div>
+    <div class="text-right filter-btns">
+        <a (click)="resetFilter()" style="cursor: pointer">.Reset</a>
+
+        <button type="submit" class="btn" (click)="applyFilter()">Apply Filters
+        </button>
+    </div>
+</form>
